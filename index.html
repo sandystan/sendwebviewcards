@@ -1,102 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
+    <title>How to make horizontal 
+      scrollable in a bootstrap row?</title>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" 
+          href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        /* The heart of the matter */
+          
+        .horizontal-scrollable > .row {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 1px;
+                    /*display: grid;*/
+  /*grid-template-columns: 2px 1fr 2px;*/
 
-.container img {
-  width: 100%;
-  height: auto;
-}
-
-.container .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #757F9A;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.container .btn:hover {
-  background-color: black;
-}
-</style>
-</head>
-<body>
-
-<!-- <h2>Button on Image</h2> -->
-<!-- <p>Add a button to an image:</p> -->
-
-<div class="container">
- <img  style ="vertical-align: middle;
-
-            max-width: 500px;
-            width: 550px;
-            max-height: 800%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: auto
-            display: block;
-            /*margin: 0%;*/
-            padding-right: 2px;"src="https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-2691810-2231675.png" alt="Place Holder" />
-<br> 
-<br>
-<br>
-<br>
-
-<br> 
-<br>
-<br>
-<br>
-<br> 
-<br>
-<br>
-<br>
-<br> 
-<br>
-<br>
-<br>
-<br> 
-<br>
-<br>
-<br>
-
-<br>
-<br> 
-<br>
-<br>
-<br>
-  <button class="btn" type="button" onclick="gcash()"  style="padding: 10px
-  /*margin: 10% 10% 10% 15%;*/
+        }
+          
+        .horizontal-scrollable > .row > .col-xs-4 {
+            display: inline-block;
+            float: none;
+            padding: 1px;
+            margin: 1% 1% 1% 1%;
 
 
-            width: 130%;
-            max-width: 30%;
+
+        }
+        /* Decorations */
+          
+        .col-xs-4 {
+            /*color: white;*/
+            font-size: 24px;
+            /*padding-bottom: 2px;*/
+            /*padding-top: AA076B;*/
+            background: #AA076B;
+            margin: 1% 1% 1% 1%;
+
+
+        }
+          
+        .col-xs-4:nth-child(2n+1) {
+            background: #AA076B;
+            margin: 5% 10% 10% 15%;
+
+        }
+
+
+        .btn{ 
+         width: 130%;
+            max-width: 90%;
             height: 40px;
             font-size: 15px;
             font-weight: bold;
             border-radius: 8px;
-            border: 12px #757F9A;
+            border: 12px #FF6E7F;
             -webkit-border-radius: 10px;
-            background-color: ;
+            background-color: #FF6E7F;
             margin-left: 40px;
-            margin-right: auto;
-            margin-top: auto
-           font-family: lato"> Button </button>
-</div>
+            margin-right: 50px;
+            margin-top: auto;
+           font-family: "lato";
+           margin: 1% 1% 1% 1%;
 
+        }
+          
+        .col-xs-4:nth-child(2n+2) {
+            background: #5691C8;
+            margin: 1% 1% 1% 1%;
+
+        }
+      
+      
+      function pubg() {
+            console.log("2")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "claim PUBG Royale Pass"
+                }),
+                "*"
+            );
+        }
+      
+      
+    
+      
+      
+      
+    </style>
+</head>
+  
+<body>
+    <center>
+        <div class="container">
+  
+         
+            <div class="container horizontal-scrollable">
+                <div class="row text-center">
+
+            <div class="col-xs-4">  <img  style ="vertical-align: middle;
+
+            max-width: 200px;
+            width: 200px;
+            max-height: 600%;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: auto,
+          
+            /*margin: 0%;*/
+            padding-right: 2px;"src="https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-2691810-2231675.png" alt="Place Holder" />
+            <br>
+            <br>
+
+
+          <button class="btn" type="button" onclick="pubg()"  style="padding: 10px"> Button </button>
+           <br>
+           <br>
+           
+            <button class="btn" type="button" onclick="pubg()"  style="padding: 10px"> Button </button>
+
+           <br>
+           <br>
+            <button class="btn" type="button" onclick="pubg()"  style="padding: 10px"> Button </button>
+        </div>
+
+            <div class="col-xs-4">  <img  style ="vertical-align: middle;
+
+            
+            max-width: 200px;
+            width: 200px;
+            max-height: 600%;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: auto
+            display: block;
+            /*margin: 0%;*/
+            padding-right: 2px;"src="https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-2691810-2231675.png" alt="Place Holder" />
+             <br>
+            <br>
+
+
+          <button class="btn" type="button" onclick="pubg()"  style="padding: 10px"> Button </button>
+           <br>
+           <br>
+           
+            <button class="btn" type="button" onclick="pubg()"  style="padding: 10px"> Button </button>
+
+           <br>
+           <br>
+            <button class="btn" type="button" onclick="pubg()"  style="padding: 10px"> Button </button>
+
+        </div>
+
+
+             <!-- <div class="col-xs-4"> <img  style ="vertical-align: middle;
+
+            
+            max-width: 200px;
+            width: 200px;
+            max-height: 600%;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: auto
+            display: block;
+            /*margin: 0%;*/
+            padding-right: 2px;"src="https://cdni.iconscout.com/illustration/premium/thumb/online-shopping-2691810-2231675.png" alt="Place Holder" />
+
+            <br>
+            <br>
+
+          <button class="btn" type="button" onclick="gcash()"  style="padding: 10px"> Button </button>
+           <br>
+           <br>
+           
+            <button class="btn" type="button" onclick="gcash()"  style="padding: 10px"> Button </button>
+
+           <br>
+           <br>
+            <button class="btn" type="button" onclick="gcash()"  style="padding: 10px"> Button </button>
+
+        </div> -->
+
+
+             
+            </div>
+        </div>
+    </center>
 </body>
+  
 </html>
